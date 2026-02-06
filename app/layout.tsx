@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Outfit } from 'next/font/google'
 import './globals.css'
 import Link from 'next/link'
+import FooterForm from './components/FooterForm'
 
 const outfit = Outfit({ subsets: ['latin'] })
 
@@ -85,16 +86,7 @@ export default function RootLayout({
               <div>
                 <h4 className="text-white font-semibold mb-4">Stay Updated</h4>
                 <p className="text-sm mb-4">Get the latest opportunities delivered to your inbox.</p>
-                <form className="flex gap-2">
-                  <input
-                    type="email"
-                    placeholder="Your email"
-                    className="flex-1 px-3 py-2 rounded-lg bg-white/10 border border-white/10 text-white placeholder-white/30 text-sm focus:outline-none focus:border-[#FF8D07]/50"
-                  />
-                  <button className="bg-[#FF8D07] hover:bg-[#E67D00] text-white px-4 py-2 rounded-lg text-sm font-medium transition">
-                    Subscribe
-                  </button>
-                </form>
+                <FooterForm />
               </div>
             </div>
             <div className="border-t border-white/10 mt-8 pt-8 text-sm text-center">
