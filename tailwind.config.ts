@@ -8,8 +8,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#2563eb',
-        secondary: '#1e40af',
+        'dark-bg': '#073B3E',
+        'alt-bg': '#0A4F53',
+        'card-bg': 'rgba(255,255,255,0.05)',
+        accent: '#FF8D07',
+        'primary-action': '#9440C8',
+        'footer-bg': '#052A2C',
+      },
+      fontFamily: {
+        outfit: ['Outfit', 'Inter', 'sans-serif'],
       },
     },
   },

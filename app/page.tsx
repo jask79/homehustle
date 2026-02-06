@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const featuredOpportunities = [
   {
@@ -83,25 +84,38 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-emerald-600 text-white py-20">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+      <section className="relative min-h-[600px] flex items-center overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&q=80"
+          alt="People working remotely"
+          fill
+          priority
+          className="object-cover"
+        />
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#073B3E]/95 via-[#073B3E]/80 to-[#073B3E]/60" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#073B3E] to-transparent" />
+
+        {/* Content */}
+        <div className="relative max-w-6xl mx-auto px-4 py-20 text-white">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-2xl">
             Real Work From Home Opportunities
           </h1>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            No scams. No get-rich-quick schemes. Just legitimate ways for everyday Americans 
+          <p className="text-xl text-white/70 mb-8 max-w-2xl">
+            No scams. No get-rich-quick schemes. Just legitimate ways for everyday Americans
             to earn money from home.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/opportunities" 
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition"
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              href="/opportunities"
+              className="bg-[#FF8D07] hover:bg-[#E67D00] text-white px-8 py-3 rounded-full font-semibold transition text-center"
             >
               Browse All Opportunities
             </Link>
-            <Link 
-              href="/guides/getting-started" 
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition"
+            <Link
+              href="/guides/getting-started"
+              className="border-2 border-white/30 text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition text-center"
             >
               Getting Started Guide
             </Link>
@@ -110,23 +124,23 @@ export default function Home() {
       </section>
 
       {/* Trust Indicators */}
-      <section className="bg-white border-b border-gray-200 py-6">
+      <section className="bg-[#0A4F53] py-6">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-8 text-center text-gray-600">
+          <div className="flex flex-wrap justify-center gap-8 text-center text-white/80">
             <div className="flex items-center gap-2">
-              <span className="text-green-500 text-xl">✓</span>
+              <span className="text-[#FF8D07] text-xl">✓</span>
               <span>100% Vetted Opportunities</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-green-500 text-xl">✓</span>
+              <span className="text-[#FF8D07] text-xl">✓</span>
               <span>No Upfront Fees Required</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-green-500 text-xl">✓</span>
+              <span className="text-[#FF8D07] text-xl">✓</span>
               <span>Updated Weekly</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-green-500 text-xl">✓</span>
+              <span className="text-[#FF8D07] text-xl">✓</span>
               <span>Real Pay Estimates</span>
             </div>
           </div>
@@ -136,17 +150,17 @@ export default function Home() {
       {/* Categories */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-8">Browse by Category</h2>
+          <h2 className="text-2xl font-bold text-center mb-8 text-white">Browse by Category</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {categories.map((cat) => (
-              <Link 
+              <Link
                 key={cat.name}
                 href={cat.href}
-                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-blue-300 hover:shadow-md transition text-center"
+                className="bg-white/5 rounded-xl p-6 border border-white/10 hover:border-[#FF8D07]/40 hover:shadow-[0_0_20px_rgba(255,141,7,0.1)] transition text-center"
               >
                 <span className="text-4xl mb-3 block">{cat.icon}</span>
-                <h3 className="font-semibold text-gray-900">{cat.name}</h3>
-                <p className="text-sm text-gray-500">{cat.count} opportunities</p>
+                <h3 className="font-semibold text-white">{cat.name}</h3>
+                <p className="text-sm text-white/50">{cat.count} opportunities</p>
               </Link>
             ))}
           </div>
@@ -154,32 +168,32 @@ export default function Home() {
       </section>
 
       {/* Featured Opportunities */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#0A4F53]">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-2xl font-bold">Featured Opportunities</h2>
-            <Link href="/opportunities" className="text-blue-600 hover:text-blue-700 font-medium">
+            <h2 className="text-2xl font-bold text-white">Featured Opportunities</h2>
+            <Link href="/opportunities" className="text-[#FF8D07] hover:text-[#FFa030] font-medium">
               View All →
             </Link>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredOpportunities.map((opp) => (
-              <article 
+              <article
                 key={opp.id}
-                className="opportunity-card bg-gray-50 rounded-xl p-6 border border-gray-200"
+                className="opportunity-card bg-white/5 rounded-xl p-6 border border-white/10"
               >
                 <div className="flex items-start justify-between mb-3">
                   <span className={getBadgeClass(opp.type)}>
                     {opp.type === 'passive' ? 'Passive Income' : opp.type}
                   </span>
-                  <span className="text-emerald-600 font-semibold text-sm">{opp.pay}</span>
+                  <span className="text-[#FF8D07] font-semibold text-sm">{opp.pay}</span>
                 </div>
-                <h3 className="font-bold text-lg text-gray-900 mb-1">{opp.title}</h3>
-                <p className="text-sm text-gray-500 mb-3">{opp.company} · {opp.schedule}</p>
-                <p className="text-gray-600 text-sm mb-4">{opp.description}</p>
+                <h3 className="font-bold text-lg text-white mb-1">{opp.title}</h3>
+                <p className="text-sm text-white/50 mb-3">{opp.company} · {opp.schedule}</p>
+                <p className="text-white/70 text-sm mb-4">{opp.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {opp.categories.map((cat) => (
-                    <span key={cat} className="text-xs bg-gray-200 text-gray-600 px-2 py-1 rounded">
+                    <span key={cat} className="text-xs bg-white/10 text-white/60 px-2 py-1 rounded">
                       {cat}
                     </span>
                   ))}
@@ -193,32 +207,32 @@ export default function Home() {
       {/* How It Works */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-12">How Home Hustle Works</h2>
+          <h2 className="text-2xl font-bold text-center mb-12 text-white">How Home Hustle Works</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[#FF8D07]/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl">🔍</span>
               </div>
-              <h3 className="font-semibold text-lg mb-2">We Research</h3>
-              <p className="text-gray-600">
-                We spend hours researching and vetting every opportunity so you don't have to.
+              <h3 className="font-semibold text-lg mb-2 text-white">We Research</h3>
+              <p className="text-white/70">
+                We spend hours researching and vetting every opportunity so you don&apos;t have to.
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[#FF8D07]/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl">✅</span>
               </div>
-              <h3 className="font-semibold text-lg mb-2">We Verify</h3>
-              <p className="text-gray-600">
+              <h3 className="font-semibold text-lg mb-2 text-white">We Verify</h3>
+              <p className="text-white/70">
                 Every listing is checked for legitimacy. No scams, MLMs, or shady opportunities.
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[#9440C8]/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl">💼</span>
               </div>
-              <h3 className="font-semibold text-lg mb-2">You Apply</h3>
-              <p className="text-gray-600">
+              <h3 className="font-semibold text-lg mb-2 text-white">You Apply</h3>
+              <p className="text-white/70">
                 Browse opportunities that fit your skills and schedule, then apply directly.
               </p>
             </div>
@@ -227,22 +241,22 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-[#0A4F53] border-t border-[#FF8D07]/20 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your Home Hustle?</h2>
-          <p className="text-blue-100 mb-8">
+          <p className="text-white/80 mb-8">
             Join thousands of Americans who have found legitimate ways to earn from home.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/opportunities" 
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition"
+            <Link
+              href="/opportunities"
+              className="bg-[#9440C8] hover:bg-[#7B33A8] text-white px-8 py-3 rounded-full font-semibold transition"
             >
               Browse Opportunities
             </Link>
-            <Link 
-              href="/subscribe" 
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition"
+            <Link
+              href="/subscribe"
+              className="border-2 border-white/30 text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition"
             >
               Get Weekly Updates
             </Link>

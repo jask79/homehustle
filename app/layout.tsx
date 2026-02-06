@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Outfit } from 'next/font/google'
 import './globals.css'
 import Link from 'next/link'
 
-const inter = Inter({ subsets: ['latin'] })
+const outfit = Outfit({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Home Hustle - Legitimate Work From Home Jobs & Passive Income',
@@ -18,27 +18,27 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={outfit.className}>
         {/* Header */}
-        <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <header className="bg-[#073B3E]/95 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
           <nav className="max-w-6xl mx-auto px-4 py-4">
             <div className="flex justify-between items-center">
               <Link href="/" className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-[#FF8D07] rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-xl">H</span>
                 </div>
-                <span className="text-xl font-bold text-gray-900">Home Hustle</span>
+                <span className="text-xl font-bold text-white">Home Hustle</span>
               </Link>
               <div className="hidden md:flex items-center gap-6">
-                <Link href="/" className="text-gray-600 hover:text-blue-600 transition">Home</Link>
-                <Link href="/opportunities" className="text-gray-600 hover:text-blue-600 transition">All Opportunities</Link>
-                <Link href="/categories/remote-jobs" className="text-gray-600 hover:text-blue-600 transition">Remote Jobs</Link>
-                <Link href="/categories/passive-income" className="text-gray-600 hover:text-blue-600 transition">Passive Income</Link>
-                <Link href="/about" className="text-gray-600 hover:text-blue-600 transition">About</Link>
+                <Link href="/" className="text-white/70 hover:text-[#FF8D07] transition">Home</Link>
+                <Link href="/opportunities" className="text-white/70 hover:text-[#FF8D07] transition">All Opportunities</Link>
+                <Link href="/categories/remote-jobs" className="text-white/70 hover:text-[#FF8D07] transition">Remote Jobs</Link>
+                <Link href="/categories/passive-income" className="text-white/70 hover:text-[#FF8D07] transition">Passive Income</Link>
+                <Link href="/about" className="text-white/70 hover:text-[#FF8D07] transition">About</Link>
               </div>
-              <Link 
-                href="/subscribe" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition hidden md:block"
+              <Link
+                href="/subscribe"
+                className="bg-[#9440C8] hover:bg-[#7B33A8] text-white px-5 py-2 rounded-full font-medium transition hidden md:block"
               >
                 Get Updates
               </Link>
@@ -50,12 +50,12 @@ export default function RootLayout({
         <main>{children}</main>
 
         {/* Footer */}
-        <footer className="bg-gray-900 text-gray-400 mt-20">
+        <footer className="bg-[#052A2C] text-white/50 mt-20">
           <div className="max-w-6xl mx-auto px-4 py-12">
             <div className="grid md:grid-cols-4 gap-8">
               <div>
                 <div className="flex items-center gap-2 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-[#FF8D07] rounded-lg flex items-center justify-center">
                     <span className="text-white font-bold text-xl">H</span>
                   </div>
                   <span className="text-xl font-bold text-white">Home Hustle</span>
@@ -86,19 +86,19 @@ export default function RootLayout({
                 <h4 className="text-white font-semibold mb-4">Stay Updated</h4>
                 <p className="text-sm mb-4">Get the latest opportunities delivered to your inbox.</p>
                 <form className="flex gap-2">
-                  <input 
-                    type="email" 
-                    placeholder="Your email" 
-                    className="flex-1 px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 text-sm"
+                  <input
+                    type="email"
+                    placeholder="Your email"
+                    className="flex-1 px-3 py-2 rounded-lg bg-white/10 border border-white/10 text-white placeholder-white/30 text-sm focus:outline-none focus:border-[#FF8D07]/50"
                   />
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+                  <button className="bg-[#FF8D07] hover:bg-[#E67D00] text-white px-4 py-2 rounded-lg text-sm font-medium transition">
                     Subscribe
                   </button>
                 </form>
               </div>
             </div>
-            <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-center">
-              <p>© 2026 Home Hustle. All rights reserved.</p>
+            <div className="border-t border-white/10 mt-8 pt-8 text-sm text-center">
+              <p>&copy; 2026 Home Hustle. All rights reserved.</p>
               <p className="mt-2">
                 <Link href="/privacy" className="hover:text-white transition">Privacy Policy</Link>
                 {' · '}
