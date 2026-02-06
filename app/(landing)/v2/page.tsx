@@ -56,7 +56,6 @@ function getRecommendation(answers: QuizAnswer[]): { title: string; description:
   const goalAnswer = answers.find(a => a.question === questions[1].question)?.answer
   const skillAnswer = answers.find(a => a.question === questions[2].question)?.answer
   
-  // Simple recommendation logic
   if (skillAnswer === 'writing') {
     return {
       title: "Content Creator Path",
@@ -82,7 +81,6 @@ function getRecommendation(answers: QuizAnswer[]): { title: string; description:
       hustles: ["Affiliate marketing", "Remote sales positions", "Real estate referrals", "High-ticket coaching/consulting"]
     }
   } else {
-    // Beginner path
     if (timeAnswer === 'minimal') {
       return {
         title: "Quick Cash Path",
@@ -106,7 +104,7 @@ function getRecommendation(answers: QuizAnswer[]): { title: string; description:
 }
 
 export default function LandingV2() {
-  const [step, setStep] = useState(0) // 0-3 = questions, 4 = form, 5 = result
+  const [step, setStep] = useState(0)
   const [answers, setAnswers] = useState<QuizAnswer[]>([])
   const [formData, setFormData] = useState({
     first_name: '',
@@ -124,9 +122,8 @@ export default function LandingV2() {
     if (step < questions.length - 1) {
       setStep(step + 1)
     } else {
-      // Calculate recommendation before showing form
       setRecommendation(getRecommendation(newAnswers))
-      setStep(questions.length) // Go to form
+      setStep(questions.length)
     }
   }
 
@@ -147,7 +144,7 @@ export default function LandingV2() {
 
       if (!res.ok) throw new Error('Something went wrong')
       
-      setStep(questions.length + 1) // Show result
+      setStep(questions.length + 1)
     } catch {
       setError('Something went wrong. Please try again.')
     } finally {
@@ -160,17 +157,19 @@ export default function LandingV2() {
   // Result screen
   if (step === questions.length + 1 && recommendation) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-600 via-blue-600 to-emerald-500">
+      <div className="min-h-screen bg-[#073B3E]" style={{ fontFamily: "'Outfit', 'Lato', sans-serif" }}>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        
         <div className="max-w-2xl mx-auto px-4 py-8 lg:py-16">
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-2xl">
             <div className="text-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-20 h-20 bg-[#FF8D07] rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-4xl">🎯</span>
               </div>
-              <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+              <h1 className="text-2xl md:text-3xl font-bold text-[#073B3E] mb-2">
                 Your Perfect Match:
               </h1>
-              <h2 className="text-xl md:text-2xl font-bold text-purple-600">
+              <h2 className="text-xl md:text-2xl font-bold text-[#9440C8]">
                 {recommendation.title}
               </h2>
             </div>
@@ -179,12 +178,12 @@ export default function LandingV2() {
               {recommendation.description}
             </p>
 
-            <div className="bg-purple-50 rounded-xl p-6 mb-6">
-              <h3 className="font-semibold text-gray-900 mb-4">Your Top Recommended Hustles:</h3>
+            <div className="bg-[#F6F6F6] rounded-xl p-6 mb-6">
+              <h3 className="font-semibold text-[#073B3E] mb-4">Your Top Recommended Hustles:</h3>
               <ul className="space-y-3">
                 {recommendation.hustles.map((hustle, i) => (
                   <li key={i} className="flex items-center gap-3">
-                    <span className="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
+                    <span className="w-8 h-8 bg-[#9440C8] text-white rounded-full flex items-center justify-center font-bold text-sm">
                       {i + 1}
                     </span>
                     <span className="text-gray-700">{hustle}</span>
@@ -193,11 +192,11 @@ export default function LandingV2() {
               </ul>
             </div>
 
-            <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 text-center">
-              <p className="text-blue-800 font-medium mb-2">
+            <div className="bg-[#FF8D07]/10 border border-[#FF8D07]/30 rounded-xl p-6 text-center">
+              <p className="text-[#073B3E] font-medium mb-2">
                 📧 Check your inbox!
               </p>
-              <p className="text-blue-600 text-sm">
+              <p className="text-gray-600 text-sm">
                 We're sending you a detailed guide with step-by-step instructions 
                 for getting started with each of these opportunities.
               </p>
@@ -211,14 +210,16 @@ export default function LandingV2() {
   // Form screen (after quiz)
   if (step === questions.length) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-600 via-blue-600 to-emerald-500">
+      <div className="min-h-screen bg-[#073B3E]" style={{ fontFamily: "'Outfit', 'Lato', sans-serif" }}>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        
         <div className="max-w-md mx-auto px-4 py-8 lg:py-16">
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-2xl">
             <div className="text-center mb-6">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[#FF8D07]/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl">✨</span>
               </div>
-              <h2 className="text-xl font-bold text-gray-900">We Found Your Perfect Match!</h2>
+              <h2 className="text-xl font-bold text-[#073B3E]">We Found Your Perfect Match!</h2>
               <p className="text-gray-500 text-sm mt-2">
                 Enter your info to see your personalized recommendations
               </p>
@@ -233,7 +234,7 @@ export default function LandingV2() {
                   type="text"
                   id="first_name"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-gray-900"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#9440C8] focus:border-[#9440C8] text-gray-900 bg-[#F6F6F6]"
                   placeholder="Your first name"
                   value={formData.first_name}
                   onChange={(e) => setFormData({ ...formData, first_name: e.target.value })}
@@ -248,7 +249,7 @@ export default function LandingV2() {
                   type="email"
                   id="email"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-gray-900"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#9440C8] focus:border-[#9440C8] text-gray-900 bg-[#F6F6F6]"
                   placeholder="you@example.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -263,7 +264,7 @@ export default function LandingV2() {
                   type="tel"
                   id="phone"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-gray-900"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#9440C8] focus:border-[#9440C8] text-gray-900 bg-[#F6F6F6]"
                   placeholder="(555) 123-4567"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -277,9 +278,9 @@ export default function LandingV2() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white font-bold py-4 px-6 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed text-lg"
+                className="w-full bg-[#9440C8] hover:bg-[#54117E] text-white font-bold py-4 px-6 rounded-full transition disabled:opacity-50 disabled:cursor-not-allowed text-lg"
               >
-                {loading ? 'Loading...' : 'See My Results →'}
+                {loading ? 'Loading...' : 'See My Results 👉'}
               </button>
             </form>
 
@@ -294,14 +295,21 @@ export default function LandingV2() {
 
   // Quiz questions
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-blue-600 to-emerald-500">
+    <div className="min-h-screen bg-[#073B3E]" style={{ fontFamily: "'Outfit', 'Lato', sans-serif" }}>
+      <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+      
+      {/* Top banner */}
+      <div className="bg-[#FF8D07] text-white text-center py-3 px-4 text-sm font-semibold">
+        🎯 Find your perfect side hustle in 60 seconds!
+      </div>
+
       <div className="max-w-xl mx-auto px-4 py-8 lg:py-16">
         {/* Header */}
         <div className="text-center text-white mb-8">
           <h1 className="text-2xl md:text-3xl font-bold mb-2">
             Find Your Perfect Side Hustle
           </h1>
-          <p className="text-purple-100">
+          <p className="text-gray-300">
             Answer 4 quick questions to get personalized recommendations
           </p>
         </div>
@@ -314,7 +322,7 @@ export default function LandingV2() {
           </div>
           <div className="h-2 bg-white/20 rounded-full overflow-hidden">
             <div 
-              className="h-full bg-white rounded-full transition-all duration-500"
+              className="h-full bg-[#FF8D07] rounded-full transition-all duration-500"
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -322,7 +330,7 @@ export default function LandingV2() {
 
         {/* Question card */}
         <div className="bg-white rounded-2xl p-6 md:p-8 shadow-2xl">
-          <h2 className="text-xl font-bold text-gray-900 mb-6 text-center">
+          <h2 className="text-xl font-bold text-[#073B3E] mb-6 text-center">
             {questions[step].question}
           </h2>
 
@@ -331,10 +339,10 @@ export default function LandingV2() {
               <button
                 key={option.value}
                 onClick={() => handleAnswer(option.value)}
-                className="w-full flex items-center gap-4 p-4 bg-gray-50 hover:bg-purple-50 border-2 border-gray-200 hover:border-purple-400 rounded-xl transition text-left group"
+                className="w-full flex items-center gap-4 p-4 bg-[#F6F6F6] hover:bg-[#073B3E] border-2 border-transparent hover:border-[#073B3E] rounded-xl transition text-left group"
               >
                 <span className="text-2xl">{option.emoji}</span>
-                <span className="font-medium text-gray-700 group-hover:text-purple-700">
+                <span className="font-medium text-gray-700 group-hover:text-white">
                   {option.label}
                 </span>
               </button>
@@ -342,7 +350,7 @@ export default function LandingV2() {
           </div>
         </div>
 
-        {/* Back button (if not first question) */}
+        {/* Back button */}
         {step > 0 && (
           <button
             onClick={() => {
