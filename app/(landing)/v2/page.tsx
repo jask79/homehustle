@@ -1,6 +1,9 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
+
+const V2_BG_IMAGE = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80"
 
 type QuizAnswer = {
   question: string
@@ -157,10 +160,12 @@ export default function LandingV2() {
   // Result screen
   if (step === questions.length + 1 && recommendation) {
     return (
-      <div className="min-h-screen bg-[#073B3E]" style={{ fontFamily: "'Outfit', 'Lato', sans-serif" }}>
+      <div className="relative min-h-screen bg-[#073B3E] overflow-hidden" style={{ fontFamily: "'Outfit', 'Lato', sans-serif" }}>
+        <Image src={V2_BG_IMAGE} alt="Team working together" fill className="object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#073B3E]/95 via-[#073B3E]/90 to-[#073B3E]/95" />
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-        
-        <div className="max-w-2xl mx-auto px-4 py-8 lg:py-16">
+
+        <div className="relative max-w-2xl mx-auto px-4 py-8 lg:py-16">
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-2xl">
             <div className="text-center mb-6">
               <div className="w-20 h-20 bg-[#FF8D07] rounded-full flex items-center justify-center mx-auto mb-4">
@@ -210,10 +215,12 @@ export default function LandingV2() {
   // Form screen (after quiz)
   if (step === questions.length) {
     return (
-      <div className="min-h-screen bg-[#073B3E]" style={{ fontFamily: "'Outfit', 'Lato', sans-serif" }}>
+      <div className="relative min-h-screen bg-[#073B3E] overflow-hidden" style={{ fontFamily: "'Outfit', 'Lato', sans-serif" }}>
+        <Image src={V2_BG_IMAGE} alt="Team working together" fill className="object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#073B3E]/95 via-[#073B3E]/90 to-[#073B3E]/95" />
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-        
-        <div className="max-w-md mx-auto px-4 py-8 lg:py-16">
+
+        <div className="relative max-w-md mx-auto px-4 py-8 lg:py-16">
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-2xl">
             <div className="text-center mb-6">
               <div className="w-16 h-16 bg-[#FF8D07]/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -295,15 +302,18 @@ export default function LandingV2() {
 
   // Quiz questions
   return (
-    <div className="min-h-screen bg-[#073B3E]" style={{ fontFamily: "'Outfit', 'Lato', sans-serif" }}>
+    <div className="relative min-h-screen bg-[#073B3E] overflow-hidden" style={{ fontFamily: "'Outfit', 'Lato', sans-serif" }}>
+      <Image src={V2_BG_IMAGE} alt="Team working together" fill priority className="object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#073B3E]/95 via-[#073B3E]/80 to-[#073B3E]/60" />
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#073B3E] to-transparent" />
       <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-      
+
       {/* Top banner */}
-      <div className="bg-[#FF8D07] text-white text-center py-3 px-4 text-sm font-semibold">
+      <div className="relative bg-[#FF8D07] text-white text-center py-3 px-4 text-sm font-semibold">
         🎯 Find your perfect side hustle in 60 seconds!
       </div>
 
-      <div className="max-w-xl mx-auto px-4 py-8 lg:py-16">
+      <div className="relative max-w-xl mx-auto px-4 py-8 lg:py-16">
         {/* Header */}
         <div className="text-center text-white mb-8">
           <h1 className="text-2xl md:text-3xl font-bold mb-2">

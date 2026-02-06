@@ -1,6 +1,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
+
+const V3_BG_IMAGE = "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1920&q=80"
 
 const hustles = [
   {
@@ -113,8 +116,18 @@ export default function LandingV3() {
       <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       
       {/* Hero */}
-      <div className="bg-[#FF8D07] py-8 md:py-12">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+      <section className="relative min-h-[400px] flex items-center overflow-hidden">
+        <Image
+          src={V3_BG_IMAGE}
+          alt="Woman smiling while looking at phone"
+          fill
+          priority
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#FF8D07]/90 via-[#FF8D07]/70 to-[#073B3E]/80" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#073B3E] to-transparent" />
+
+        <div className="relative max-w-4xl mx-auto px-4 py-8 md:py-12 text-center">
           <div className="inline-block bg-white/20 backdrop-blur-sm text-white text-sm font-bold px-4 py-2 rounded-full mb-4 animate-pulse">
             ⚡ NO EXPERIENCE REQUIRED
           </div>
@@ -123,14 +136,23 @@ export default function LandingV3() {
             <span className="text-[#073B3E]">{timeString || "Tonight"}</span>
           </h1>
           <p className="text-lg text-white/90 max-w-2xl mx-auto">
-            Stop scrolling. Start earning. These aren't "get rich quick" schemes — 
-            they're real ways people make extra cash, and you can start in minutes.
+            Stop scrolling. Start earning. These aren&apos;t &quot;get rich quick&quot; schemes —
+            they&apos;re real ways people make extra cash, and you can start in minutes.
           </p>
         </div>
-      </div>
+      </section>
 
       {/* Main content */}
-      <div className="max-w-4xl mx-auto px-4 py-8 md:py-12">
+      <div className="relative overflow-hidden">
+        <Image
+          src={V3_BG_IMAGE}
+          alt=""
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#073B3E] via-[#073B3E]/95 to-[#073B3E]/90" />
+
+      <div className="relative max-w-4xl mx-auto px-4 py-8 md:py-12">
         <div className="lg:grid lg:grid-cols-3 lg:gap-8">
           
           {/* Left: Hustle preview */}
@@ -232,6 +254,7 @@ export default function LandingV3() {
             </div>
           </div>
         </div>
+      </div>
       </div>
 
       {/* Urgency footer */}
