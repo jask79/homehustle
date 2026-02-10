@@ -102,7 +102,8 @@ export default function LandingV4() {
             
             <div className="space-y-4 mb-8">
               {[
-                '$4,200 minimum monthly pay',
+                'Earn $4,200 minimum if you qualify',
+                'Absolutely ZERO cost to you',
                 'Very little work required',
                 'Limited to 30 partners only',
                 'Quick qualification process',
