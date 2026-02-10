@@ -31,9 +31,7 @@ export default function LandingV4() {
           last_name: formData.last_name,
           email: formData.email,
           phone: formData.phone,
-          source: 'landing-page-v4',
-          // Additional fields as metadata/notes
-          notes: `Credit Score 600+: ${formData.credit_score_above_600} | Bankruptcy 7yrs: ${formData.bankruptcy_past_7_years} | Notes: ${formData.notes || 'None'}`,
+          source: `v4|credit600:${formData.credit_score_above_600}|bankrupt7:${formData.bankruptcy_past_7_years}|${formData.notes || ''}`,
         }),
       })
 
