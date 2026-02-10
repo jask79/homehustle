@@ -3,6 +3,11 @@
 import { useState } from 'react'
 import Image from 'next/image'
 
+const SUPABASE_URL =
+  process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://sfsrjtswrmyuifyaplac.supabase.co'
+const SUPABASE_ANON_KEY =
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
+
 export default function LandingV4() {
   const [formData, setFormData] = useState({
     first_name: '',
@@ -14,28 +19,43 @@ export default function LandingV4() {
   })
   const [loading, setLoading] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [disqualified, setDisqualified] = useState(false)
   const [error, setError] = useState('')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setLoading(true)
     setError('')
 
+    // Client-side qualification gate
+    if (
+      formData.credit_score_above_600 === 'N' ||
+      formData.bankruptcy_past_7_years === 'Y'
+    ) {
+      setDisqualified(true)
+      return
+    }
+
+    setLoading(true)
+
     try {
-      const res = await fetch('https://mid.partners/api/capture-lead', {
+      const res = await fetch(`${SUPABASE_URL}/functions/v1/capture-lead`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          'apikey': SUPABASE_ANON_KEY,
+        },
         body: JSON.stringify({
           first_name: formData.first_name,
           last_name: formData.last_name,
           email: formData.email,
           phone: formData.phone,
-          source: `v4|credit600:${formData.credit_score_above_600}|bankrupt7:${formData.bankruptcy_past_7_years}`,
+          source: 'homehustle-v4',
         }),
       })
 
       if (!res.ok) throw new Error('Something went wrong')
-      
+
       setSubmitted(true)
     } catch {
       setError('Something went wrong. Please try again.')
@@ -44,18 +64,56 @@ export default function LandingV4() {
     }
   }
 
+  if (disqualified) {
+    return (
+      <div className="min-h-screen bg-[#073B3E] flex items-center justify-center px-4" style={{ fontFamily: "'Outfit', 'Lato', sans-serif" }}>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+        <div className="bg-white rounded-2xl p-8 max-w-md w-full text-center shadow-2xl">
+          <div className="w-20 h-20 bg-[#FF8D07]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span className="text-4xl">&#128172;</span>
+          </div>
+          <h2 className="text-2xl font-bold text-[#073B3E] mb-4">Thanks for Your Interest</h2>
+          <p className="text-gray-600 mb-6">
+            Unfortunately, this particular opportunity requires a credit score above 600 and no recent bankruptcy.
+            We appreciate you taking the time to apply, and we&apos;ll keep you in mind for other opportunities that may be a better fit.
+          </p>
+          <p className="text-sm text-gray-500 mb-8">
+            We wish you all the best!
+          </p>
+          <button
+            onClick={() => {
+              setDisqualified(false)
+              setFormData({
+                first_name: '',
+                last_name: '',
+                email: '',
+                phone: '',
+                credit_score_above_600: '',
+                bankruptcy_past_7_years: '',
+              })
+            }}
+            className="bg-[#073B3E] hover:bg-[#073B3E]/80 text-white font-semibold py-3 px-8 rounded-full transition"
+          >
+            Go Back
+          </button>
+        </div>
+      </div>
+    )
+  }
+
   if (submitted) {
     return (
       <div className="min-h-screen bg-[#073B3E] flex items-center justify-center px-4" style={{ fontFamily: "'Outfit', 'Lato', sans-serif" }}>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-        
+
         <div className="bg-white rounded-2xl p-8 max-w-md w-full text-center shadow-2xl">
           <div className="w-20 h-20 bg-[#FF8D07]/20 rounded-full flex items-center justify-center mx-auto mb-6">
-            <span className="text-4xl">✅</span>
+            <span className="text-4xl">&#9989;</span>
           </div>
           <h2 className="text-2xl font-bold text-[#073B3E] mb-4">Application Received!</h2>
           <p className="text-gray-600 mb-6">
-            Thank you for your interest in becoming a <strong>Merchant Partner</strong>. 
+            Thank you for your interest in becoming a <strong>Merchant Partner</strong>.
             A team member will contact you within <strong>24 hours</strong>.
           </p>
           <p className="text-sm text-gray-500">
