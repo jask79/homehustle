@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 
 export default function LandingV4() {
   const [formData, setFormData] = useState({
@@ -72,14 +73,26 @@ export default function LandingV4() {
     <div className="min-h-screen bg-[#073B3E]" style={{ fontFamily: "'Outfit', 'Lato', sans-serif" }}>
       <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       
-      {/* Top banner */}
-      <div className="bg-[#FF8D07] text-white text-center py-3 px-4 text-sm font-semibold">
-        🔒 Limited Opportunity — Only 30 Partner Spots Available
-      </div>
+      {/* Hero section with background image */}
+      <section className="relative min-h-screen flex flex-col overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=1920&q=80"
+          alt="Happy woman working from home"
+          fill
+          priority
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#073B3E]/95 via-[#073B3E]/80 to-[#073B3E]/60" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#073B3E] to-transparent" />
 
-      {/* Main content */}
-      <div className="max-w-4xl mx-auto px-4 py-8 lg:py-16">
-        <div className="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-start">
+        {/* Top banner */}
+        <div className="relative bg-[#FF8D07] text-white text-center py-3 px-4 text-sm font-semibold">
+          🔒 Limited Opportunity — Only 30 Partner Spots Available
+        </div>
+
+        {/* Main content */}
+        <div className="relative max-w-4xl mx-auto px-4 py-8 lg:py-16 flex-1 flex items-center">
+          <div className="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-start w-full">
           
           {/* Left: Copy */}
           <div className="text-white mb-10 lg:mb-0">
@@ -292,6 +305,7 @@ export default function LandingV4() {
           </div>
         </div>
       </div>
+      </section>
 
       {/* Bottom section */}
       <div className="bg-[#FF8D07]/10 py-6">
