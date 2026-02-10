@@ -11,7 +11,6 @@ export default function LandingV4() {
     phone: '',
     credit_score_above_600: '',
     bankruptcy_past_7_years: '',
-    notes: '',
   })
   const [loading, setLoading] = useState(false)
   const [submitted, setSubmitted] = useState(false)
@@ -31,7 +30,7 @@ export default function LandingV4() {
           last_name: formData.last_name,
           email: formData.email,
           phone: formData.phone,
-          source: `v4|credit600:${formData.credit_score_above_600}|bankrupt7:${formData.bankruptcy_past_7_years}|${formData.notes || ''}`,
+          source: `v4|credit600:${formData.credit_score_above_600}|bankrupt7:${formData.bankruptcy_past_7_years}`,
         }),
       })
 
@@ -268,20 +267,6 @@ export default function LandingV4() {
                     <span className="text-gray-700">No</span>
                   </label>
                 </div>
-              </div>
-
-              <div>
-                <label htmlFor="notes" className="block text-sm font-medium text-gray-700 mb-1">
-                  Notes for us <span className="text-gray-400">(optional)</span>
-                </label>
-                <textarea
-                  id="notes"
-                  rows={3}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#9440C8] focus:border-[#9440C8] text-gray-900 bg-[#F6F6F6] resize-none"
-                  placeholder="Anything you'd like us to know..."
-                  value={formData.notes}
-                  onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                />
               </div>
 
               {error && (
