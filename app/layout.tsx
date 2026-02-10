@@ -4,6 +4,7 @@ import './globals.css'
 import Link from 'next/link'
 import FooterForm from './components/FooterForm'
 import MobileNav from './components/MobileNav'
+import { GoogleAnalytics } from './components/Analytics'
 
 const outfit = Outfit({ subsets: ['latin'] })
 
@@ -38,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={outfit.className}>
+        <GoogleAnalytics />
         {/* Header */}
         <header className="bg-[#073B3E]/95 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
           <nav className="max-w-6xl mx-auto px-4 py-4">
