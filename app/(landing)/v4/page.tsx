@@ -88,7 +88,7 @@ export default function LandingV4() {
             </div>
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 leading-tight">
-              Earn <span className="text-[#FF8D07]">$4,200+ Monthly</span> as a Merchant Partner
+              Earn <span className="text-[#FF8D07]">$4,200+ Guaranteed</span> as a Merchant Partner
             </h1>
             
             <p className="text-lg text-gray-300 mb-6">
