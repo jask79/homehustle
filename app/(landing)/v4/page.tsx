@@ -92,8 +92,7 @@ export default function LandingV4() {
             </h1>
             
             <p className="text-lg text-gray-300 mb-6">
-              We have a unique role seeking <strong className="text-white">30 new partners</strong> for 
-              monthly income as a Merchant Partner.
+              We have a unique role seeking <strong className="text-white">30 new Merchant Partners</strong>.
             </p>
 
             <p className="text-lg text-gray-300 mb-8">
