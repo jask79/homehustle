@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { LandingExitIntent } from '../../../components/ExitIntent'
+import { LandingExitIntent } from '../../components/ExitIntent'
 
 const V3_BG_IMAGE = "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1920&q=80"
 

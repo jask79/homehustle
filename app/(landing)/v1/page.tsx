@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { LandingExitIntent } from '../../../components/ExitIntent'
+import { LandingExitIntent } from '../../components/ExitIntent'
 
 export default function LandingV1() {
   const [formData, setFormData] = useState({

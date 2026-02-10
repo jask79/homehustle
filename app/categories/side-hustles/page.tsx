@@ -176,6 +176,48 @@ const sideHustles = [
     ],
   },
   {
+    category: 'AI & Digital',
+    icon: '🤖',
+    hustles: [
+      {
+        title: 'AI Model Training',
+        income: '$15-50/hour',
+        startup: 'Computer',
+        flexibility: 'High',
+        description: 'Help train AI models by providing feedback, labeling data, and evaluating outputs. No AI experience needed—just attention to detail.',
+        tips: ['Apply to multiple platforms (Scale, Remotasks, Outlier)', 'Higher complexity tasks pay more', 'Build qualifications for premium projects'],
+        link: 'https://scale.com/aiannotation',
+      },
+      {
+        title: 'UGC Creator (User-Generated Content)',
+        income: '$50-2,000/month',
+        startup: 'Smartphone',
+        flexibility: 'High',
+        description: 'Create authentic-looking content for brands—unboxing videos, product reviews, lifestyle clips. No following required, just good content.',
+        tips: ['Build a portfolio of 3-5 sample videos', 'Reach out directly to small brands', 'Join UGC creator communities for leads'],
+        link: 'https://www.fiverr.com/categories/video-animation/ugc',
+      },
+      {
+        title: 'Content Clipping',
+        income: '$0.30-3.00 per 1K views',
+        startup: 'Phone or computer',
+        flexibility: 'High',
+        description: 'Repurpose long-form videos (podcasts, streams) into short clips for TikTok, Reels, and Shorts. Earn based on views generated.',
+        tips: ['Post 3+ clips daily for best results', 'Focus on high-emotion moments', 'Use CapCut for quick editing'],
+        link: 'https://whop.com/discover/whop-clips/',
+      },
+      {
+        title: 'Remote Closing (Sales)',
+        income: '$500-2,000+/deal',
+        startup: 'Phone and computer',
+        flexibility: 'Medium',
+        description: 'Close sales calls for coaches, course creators, and service businesses. High-ticket commissions for converting warm leads.',
+        tips: ['Start with free training programs', 'Practice handling objections', 'Build relationships with coaches in your niche'],
+        link: 'https://www.upwork.com/freelance-jobs/sales/',
+      },
+    ],
+  },
+  {
     category: 'Creative',
     icon: '🎨',
     hustles: [
@@ -234,8 +276,8 @@ export default function SideHustlesPage() {
         <div className="flex flex-wrap gap-2">
           <span className="bg-white/20 px-3 py-1 rounded-full text-sm">DoorDash</span>
           <span className="bg-white/20 px-3 py-1 rounded-full text-sm">Instacart</span>
-          <span className="bg-white/20 px-3 py-1 rounded-full text-sm">Rover</span>
-          <span className="bg-white/20 px-3 py-1 rounded-full text-sm">TaskRabbit</span>
+          <span className="bg-white/20 px-3 py-1 rounded-full text-sm">AI Training</span>
+          <span className="bg-white/20 px-3 py-1 rounded-full text-sm">UGC Creation</span>
           <span className="bg-white/20 px-3 py-1 rounded-full text-sm">Sell on Mercari</span>
         </div>
       </div>
