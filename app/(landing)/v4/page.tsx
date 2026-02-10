@@ -160,22 +160,23 @@ export default function LandingV4() {
             </h1>
             
             <p className="text-lg text-gray-300 mb-6">
-              We have a unique role seeking <strong className="text-white">30 new Merchant Partners</strong>.
+              We&apos;re looking for <strong className="text-white">30 people with good credit</strong> to 
+              partner with us on a merchant financing opportunity.
             </p>
 
             <p className="text-lg text-gray-300 mb-8">
-              Not everyone will qualify for this one, but for those that do — 
-              <strong className="text-[#FF8D07]"> it requires very little work</strong>.
+              You leverage your credit profile, we handle everything else — 
+              <strong className="text-[#FF8D07]"> and you earn $4,200+ guaranteed</strong>.
             </p>
             
             <div className="space-y-4 mb-8">
               {[
-                'Earn $4,200 minimum if you qualify',
-                'Absolutely ZERO cost to you',
-                'Very little work required',
-                'Limited to 30 partners only',
-                'Quick qualification process',
-                'Contact within 24 hours',
+                'Earn $4,200+ guaranteed if you qualify',
+                'Zero upfront cost — we cover everything',
+                'Minimal time investment (a few hours total)',
+                'We walk you through every step',
+                'Limited to 30 partners this round',
+                'Personal call within 24 hours to explain details',
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <span className="text-[#FF8D07] text-xl">✓</span>
@@ -184,11 +185,21 @@ export default function LandingV4() {
               ))}
             </div>
 
-            {/* Trust indicators */}
-            <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-              <p className="text-gray-400 text-sm">
-                ⚡ <strong className="text-white">Spots filling fast</strong> — We review applications in the order received. 
-                Fill out the form to see if you qualify.
+            {/* How it works */}
+            <div className="bg-white/5 rounded-xl p-4 border border-white/10 mb-4">
+              <p className="text-white font-medium text-sm mb-2">How it works:</p>
+              <ol className="text-gray-400 text-sm space-y-1">
+                <li>1. You apply & we verify your credit qualifies</li>
+                <li>2. We set up merchant accounts in your name</li>
+                <li>3. You receive your guaranteed payout</li>
+              </ol>
+            </div>
+
+            {/* Urgency */}
+            <div className="bg-[#FF8D07]/10 rounded-xl p-4 border border-[#FF8D07]/30">
+              <p className="text-gray-300 text-sm">
+                ⚡ <strong className="text-white">Spots filling fast</strong> — We review applications in order received. 
+                Apply now to secure your spot.
               </p>
             </div>
           </div>

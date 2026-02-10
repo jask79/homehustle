@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { LandingExitIntent } from '../../../components/ExitIntent'
 
 const V3_BG_IMAGE = "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1920&q=80"
 
@@ -198,7 +199,7 @@ export default function LandingV3() {
 
           {/* Right: Sticky form */}
           <div className="lg:col-span-1">
-            <div className="bg-white rounded-2xl p-6 shadow-2xl sticky top-4">
+            <div className="bg-white rounded-2xl p-6 shadow-2xl lg:sticky lg:top-4">
               <div className="text-center mb-4">
                 <span className="text-3xl mb-2 block">📥</span>
                 <h3 className="font-bold text-[#073B3E] text-lg">Get the Full Guide Free</h3>
@@ -226,9 +227,8 @@ export default function LandingV3() {
 
                 <input
                   type="tel"
-                  required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#9440C8] focus:border-[#9440C8] text-gray-900 bg-[#F6F6F6]"
-                  placeholder="Phone number"
+                  placeholder="Phone (optional)"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 />
@@ -268,6 +268,9 @@ export default function LandingV3() {
           </p>
         </div>
       </div>
+
+      {/* Exit Intent Popup */}
+      {!submitted && <LandingExitIntent source="v3" />}
     </div>
   )
 }

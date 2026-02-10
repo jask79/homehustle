@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { LandingExitIntent } from '../../../components/ExitIntent'
 
 export default function LandingV1() {
   const [formData, setFormData] = useState({
@@ -114,16 +115,22 @@ export default function LandingV1() {
                 ))}
               </div>
 
-              {/* Social proof */}
-              <div className="flex items-center gap-4 text-gray-300 text-sm">
-                <div className="flex -space-x-2">
-                  {['👩', '👨', '👩‍🦱', '🧑'].map((emoji, i) => (
-                    <div key={i} className="w-8 h-8 bg-[#FF8D07]/30 rounded-full flex items-center justify-center text-sm border-2 border-[#073B3E]">
-                      {emoji}
-                    </div>
-                  ))}
+              {/* Social proof + urgency */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-4 text-gray-300 text-sm">
+                  <div className="flex -space-x-2">
+                    {['👩', '👨', '👩‍🦱', '🧑'].map((emoji, i) => (
+                      <div key={i} className="w-8 h-8 bg-[#FF8D07]/30 rounded-full flex items-center justify-center text-sm border-2 border-[#073B3E]">
+                        {emoji}
+                      </div>
+                    ))}
+                  </div>
+                  <span>Join 2,400+ people building side income</span>
                 </div>
-                <span>Join 2,400+ people building side income</span>
+                <div className="flex items-center gap-2 text-[#FF8D07] text-sm font-medium">
+                  <span className="animate-pulse">🔥</span>
+                  <span>127 people downloaded this guide today</span>
+                </div>
               </div>
             </div>
 
@@ -168,12 +175,11 @@ export default function LandingV1() {
 
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                    Phone Number
+                    Phone Number <span className="text-gray-400 font-normal">(optional)</span>
                   </label>
                   <input
                     type="tel"
                     id="phone"
-                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#9440C8] focus:border-[#9440C8] text-gray-900 bg-[#F6F6F6]"
                     placeholder="(555) 123-4567"
                     value={formData.phone}
@@ -213,6 +219,9 @@ export default function LandingV1() {
           </div>
         </div>
       </div>
+
+      {/* Exit Intent Popup */}
+      {!submitted && <LandingExitIntent source="v1" />}
     </div>
   )
 }
