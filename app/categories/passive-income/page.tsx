@@ -231,7 +231,7 @@ export default function PassiveIncomePage() {
     <div className="max-w-6xl mx-auto px-4 py-12">
       {/* Header */}
       <div className="mb-12">
-        <Link href="/" className="text-blue-600 hover:text-blue-700 text-sm mb-4 inline-block">
+        <Link href="/" className="text-[#FF8D07] hover:text-[#FFa030] text-sm mb-4 inline-block">
           ← Back to Home
         </Link>
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Passive Income Ideas</h1>

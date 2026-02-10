@@ -3,6 +3,8 @@ import { Outfit } from 'next/font/google'
 import './globals.css'
 import Link from 'next/link'
 import FooterForm from './components/FooterForm'
+import MobileNav from './components/MobileNav'
+import { GoogleAnalytics } from './components/Analytics'
 
 const outfit = Outfit({ subsets: ['latin'] })
 
@@ -10,6 +12,23 @@ export const metadata: Metadata = {
   title: 'Home Hustle - Legitimate Work From Home Jobs & Passive Income',
   description: 'Find real work from home opportunities, remote jobs, and passive income ideas. No scams, just vetted opportunities for everyday Americans.',
   keywords: 'work from home, remote jobs, side hustle, passive income, home business, online jobs',
+  openGraph: {
+    title: 'Home Hustle - Legitimate Work From Home Jobs & Passive Income',
+    description: 'Find real work from home opportunities, remote jobs, and passive income ideas. No scams, just vetted opportunities for everyday Americans.',
+    url: 'https://homehustle.info',
+    siteName: 'Home Hustle',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Home Hustle - Legitimate Work From Home Jobs & Passive Income',
+    description: 'Find real work from home opportunities, remote jobs, and passive income ideas. No scams, just vetted opportunities.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({
@@ -20,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={outfit.className}>
+        <GoogleAnalytics />
         {/* Header */}
         <header className="bg-[#073B3E]/95 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
           <nav className="max-w-6xl mx-auto px-4 py-4">
@@ -43,6 +63,7 @@ export default function RootLayout({
               >
                 Get Updates
               </Link>
+              <MobileNav />
             </div>
           </nav>
         </header>
