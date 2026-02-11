@@ -147,6 +147,36 @@ const remoteJobs = [
     link: 'https://appen.com/join-our-crowd/',
     hiring: true,
   },
+  {
+    company: 'CVS Health',
+    title: 'Remote Clinical & Corporate Roles',
+    pay: '$17-35/hour',
+    type: 'Full-Time',
+    description: 'One of the largest healthcare employers with extensive remote opportunities in nursing, clinical support, IT, and corporate functions. Ranked #11 on FlexJobs Top 100.',
+    requirements: ['Varies by role', 'Healthcare experience preferred for clinical', 'Strong computer skills'],
+    link: 'https://jobs.cvshealth.com/us/en/search-results?',
+    hiring: true,
+  },
+  {
+    company: 'Instacart',
+    title: 'Remote Corporate Positions',
+    pay: '$20-50+/hour',
+    type: 'Full-Time',
+    description: 'Beyond shopping gigs, Instacart hires remotely for engineering, marketing, finance, and customer support. Competitive tech company benefits and equity.',
+    requirements: ['Relevant experience in your field', 'Self-motivated', 'Strong communication skills'],
+    link: 'https://instacart.careers/',
+    hiring: true,
+  },
+  {
+    company: 'HubSpot',
+    title: 'Remote Sales & Marketing',
+    pay: '$22-60+/hour',
+    type: 'Full-Time',
+    description: 'Leading CRM platform with a remote-first culture. Unlimited vacation, paid sabbatical, and strong professional development opportunities.',
+    requirements: ['Experience in your field', 'Strong communication', 'Customer-focused mindset'],
+    link: 'https://www.hubspot.com/careers/jobs?page=1#office=remote;',
+    hiring: true,
+  },
 ]
 
 export default function RemoteJobsPage() {

@@ -186,7 +186,7 @@ const sideHustles = [
         flexibility: 'High',
         description: 'Help train AI models by providing feedback, labeling data, and evaluating outputs. No AI experience needed—just attention to detail.',
         tips: ['Apply to multiple platforms (Scale, Remotasks, Outlier)', 'Higher complexity tasks pay more', 'Build qualifications for premium projects'],
-        link: 'https://scale.com/aiannotation',
+        link: 'https://scale.com/careers',
       },
       {
         title: 'UGC Creator (User-Generated Content)',

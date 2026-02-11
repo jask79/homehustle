@@ -151,6 +151,23 @@ const passiveIncomeIdeas = [
         cons: ['Saturated niches', 'Needs good design sense', 'Support requests'],
         resources: ['Notion.so', 'Gumroad.com', 'Etsy.com'],
       },
+      {
+        title: 'YouTube Automation (Faceless Channels)',
+        income: '$500-10,000+/month',
+        startup: '$0-500',
+        effort: 'Medium upfront, Low-Medium ongoing',
+        timeToProfit: '6-12 months',
+        description: 'Build YouTube channels without showing your face. Use AI voiceovers, stock footage, and outsourced editing. Niches like finance, history, and motivation work well.',
+        howToStart: [
+          'Pick a niche with high CPM (finance, tech, business)',
+          'Use AI tools like ElevenLabs for voiceovers',
+          'Outsource editing on Fiverr or hire a team',
+          'Post consistently (2-4 videos per week)',
+        ],
+        pros: ['Scalable (run multiple channels)', 'Ad revenue + sponsorships', 'Sell channels for 30-40x monthly revenue'],
+        cons: ['Takes time to monetize', 'Competitive space', 'Algorithm changes'],
+        resources: ['YouTube.com/creators', 'ElevenLabs.io', 'Fiverr.com'],
+      },
     ],
   },
   {
