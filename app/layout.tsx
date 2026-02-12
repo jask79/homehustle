@@ -47,7 +47,7 @@ export default function RootLayout({
             <div className="flex justify-between items-center">
               <Link href="/" className="flex items-center">
                 <Image 
-                  src="/logo.jpg" 
+                  src="/logo.png" 
                   alt="Home Hustle" 
                   width={180} 
                   height={50} 
@@ -83,7 +83,7 @@ export default function RootLayout({
               <div>
                 <div className="mb-4">
                   <Image 
-                    src="/logo.jpg" 
+                    src="/logo.png" 
                     alt="Home Hustle" 
                     width={180} 
                     height={50} 
