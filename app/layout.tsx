@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Outfit } from 'next/font/google'
 import './globals.css'
 import Link from 'next/link'
+import Image from 'next/image'
 import FooterForm from './components/FooterForm'
 import MobileNav from './components/MobileNav'
 import { GoogleAnalytics } from './components/Analytics'
@@ -44,11 +45,15 @@ export default function RootLayout({
         <header className="bg-[#073B3E]/95 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
           <nav className="max-w-6xl mx-auto px-4 py-4">
             <div className="flex justify-between items-center">
-              <Link href="/" className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-[#FF8D07] rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">H</span>
-                </div>
-                <span className="text-xl font-bold text-white">Home Hustle</span>
+              <Link href="/" className="flex items-center">
+                <Image 
+                  src="/logo.jpg" 
+                  alt="Home Hustle" 
+                  width={180} 
+                  height={50} 
+                  className="h-10 w-auto"
+                  priority
+                />
               </Link>
               <div className="hidden md:flex items-center gap-6">
                 <Link href="/" className="text-white/70 hover:text-[#FF8D07] transition">Home</Link>
@@ -76,11 +81,14 @@ export default function RootLayout({
           <div className="max-w-6xl mx-auto px-4 py-12">
             <div className="grid md:grid-cols-4 gap-8">
               <div>
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-10 h-10 bg-[#FF8D07] rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-xl">H</span>
-                  </div>
-                  <span className="text-xl font-bold text-white">Home Hustle</span>
+                <div className="mb-4">
+                  <Image 
+                    src="/logo.jpg" 
+                    alt="Home Hustle" 
+                    width={180} 
+                    height={50} 
+                    className="h-10 w-auto"
+                  />
                 </div>
                 <p className="text-sm">
                   Helping everyday Americans find legitimate work from home opportunities and build real income streams.
