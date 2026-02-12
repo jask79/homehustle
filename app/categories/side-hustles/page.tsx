@@ -215,6 +215,24 @@ const sideHustles = [
         tips: ['Start with free training programs', 'Practice handling objections', 'Build relationships with coaches in your niche'],
         link: 'https://www.upwork.com/freelance-jobs/sales/',
       },
+      {
+        title: 'Custom GPT Builder',
+        income: '$200-2,000+/GPT',
+        startup: 'ChatGPT Plus ($20/mo)',
+        flexibility: 'High',
+        description: 'Build custom GPTs that solve specific problems—lead qualifiers, content generators, customer support bots. Businesses pay for AI tools tailored to their workflow.',
+        tips: ['Focus on one niche (real estate, e-commerce, coaching)', 'Include clear documentation', 'Offer setup + training packages'],
+        link: 'https://openai.com/index/introducing-gpts/',
+      },
+      {
+        title: 'AI Automation Consultant',
+        income: '$50-200/hour',
+        startup: 'Computer + AI tools',
+        flexibility: 'High',
+        description: 'Help small businesses automate repetitive tasks using tools like Zapier, Make, and AI. Set up email sequences, data entry automation, and customer service bots.',
+        tips: ['Get certified in popular automation tools', 'Start with your own workflows as case studies', 'Target businesses already using SaaS tools'],
+        link: 'https://zapier.com/experts',
+      },
     ],
   },
   {
@@ -277,6 +295,7 @@ export default function SideHustlesPage() {
           <span className="bg-white/20 px-3 py-1 rounded-full text-sm">DoorDash</span>
           <span className="bg-white/20 px-3 py-1 rounded-full text-sm">Instacart</span>
           <span className="bg-white/20 px-3 py-1 rounded-full text-sm">AI Training</span>
+          <span className="bg-white/20 px-3 py-1 rounded-full text-sm">Custom GPT Builder</span>
           <span className="bg-white/20 px-3 py-1 rounded-full text-sm">UGC Creation</span>
           <span className="bg-white/20 px-3 py-1 rounded-full text-sm">Sell on Mercari</span>
         </div>

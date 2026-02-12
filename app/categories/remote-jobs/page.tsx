@@ -44,7 +44,7 @@ const remoteJobs = [
     type: 'Contract/Freelance',
     description: 'Independent contractor position taking inbound calls for various clients. You choose your own schedule and work as much or as little as you want.',
     requirements: ['Must pass background check', 'Dedicated phone line', 'Quiet workspace'],
-    link: 'https://www.liveops.com/become-an-agent',
+    link: 'https://join.liveops.com/apply-now/',
     hiring: true,
   },
   {
@@ -177,6 +177,36 @@ const remoteJobs = [
     link: 'https://www.hubspot.com/careers/jobs?page=1#office=remote;',
     hiring: true,
   },
+  {
+    company: 'Invisible Technologies',
+    title: 'AI Operations Specialist',
+    pay: '$18-35/hour',
+    type: 'Full-Time & Part-Time',
+    description: 'Ranked #1 on FlexJobs Top 100 Companies for 2026. Help businesses automate processes using AI. Fully remote, async-friendly culture with flexible schedules.',
+    requirements: ['Strong attention to detail', 'Process-oriented thinking', 'Comfortable with AI tools', 'Self-motivated'],
+    link: 'https://www.invisible.co/careers',
+    hiring: true,
+  },
+  {
+    company: 'Mozilla',
+    title: 'Remote Engineering & Support',
+    pay: '$25-75+/hour',
+    type: 'Full-Time',
+    description: 'Creator of Firefox browser. Fully remote positions with incredible benefits including 26 weeks paid parental leave, wellness reimbursement, and professional development funding.',
+    requirements: ['Varies by role', 'Passion for open internet', 'Self-directed work style'],
+    link: 'https://www.mozilla.org/en-US/careers/listings/?location=Remote%20US',
+    hiring: true,
+  },
+  {
+    company: 'Amplify',
+    title: 'K-12 Education Roles',
+    pay: '$20-45/hour',
+    type: 'Full-Time',
+    description: 'K-12 curriculum company ranked #10 on FlexJobs Top 100. Remote roles in sales, engineering, content development, and more. Great for educators transitioning to remote work.',
+    requirements: ['Education background preferred', 'Strong communication', 'Tech-savvy'],
+    link: 'https://amplify.wd1.myworkdayjobs.com/Amplify_Careers',
+    hiring: true,
+  },
 ]
 
 export default function RemoteJobsPage() {
@@ -201,7 +231,7 @@ export default function RemoteJobsPage() {
           <div className="text-sm text-gray-600">Companies Hiring</div>
         </div>
         <div className="bg-green-50 rounded-xl p-4 text-center">
-          <div className="text-2xl font-bold text-green-600">$14-30</div>
+          <div className="text-2xl font-bold text-green-600">$14-75</div>
           <div className="text-sm text-gray-600">Hourly Range</div>
         </div>
         <div className="bg-purple-50 rounded-xl p-4 text-center">

@@ -123,6 +123,29 @@ const freelanceOpportunities = [
     ],
   },
   {
+    category: 'AI & Automation',
+    opportunities: [
+      {
+        title: 'AI Content Specialist',
+        platforms: ['Upwork', 'Fiverr', 'Direct clients'],
+        pay: '$30-100+/hour',
+        description: 'Help businesses leverage AI for content creation—blog posts, social media, email sequences. Clients pay for your expertise in prompting and editing AI output.',
+        skills: ['AI tool proficiency (ChatGPT, Claude)', 'Editing skills', 'Content strategy', 'Client communication'],
+        difficulty: 'Medium',
+        link: 'https://www.upwork.com/freelance-jobs/ai/',
+      },
+      {
+        title: 'Automation Specialist',
+        platforms: ['Upwork', 'Zapier Experts', 'Make Partners'],
+        pay: '$50-150/hour',
+        description: 'Build automated workflows connecting apps and services. High demand from businesses wanting to save time on repetitive tasks.',
+        skills: ['Zapier/Make proficiency', 'Process mapping', 'Problem-solving', 'Technical documentation'],
+        difficulty: 'Medium-Hard',
+        link: 'https://zapier.com/experts',
+      },
+    ],
+  },
+  {
     category: 'Transcription & Translation',
     opportunities: [
       {
