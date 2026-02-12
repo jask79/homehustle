@@ -13,6 +13,10 @@ export const metadata: Metadata = {
   title: 'Home Hustle - Legitimate Work From Home Jobs & Passive Income',
   description: 'Find real work from home opportunities, remote jobs, and passive income ideas. No scams, just vetted opportunities for everyday Americans.',
   keywords: 'work from home, remote jobs, side hustle, passive income, home business, online jobs',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title: 'Home Hustle - Legitimate Work From Home Jobs & Passive Income',
     description: 'Find real work from home opportunities, remote jobs, and passive income ideas. No scams, just vetted opportunities for everyday Americans.',
@@ -46,9 +50,14 @@ export default function RootLayout({
           <nav className="max-w-6xl mx-auto px-4 py-4">
             <div className="flex justify-between items-center">
               <Link href="/" className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-[#FF8D07] rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">H</span>
-                </div>
+                <Image 
+                  src="/house-icon.png" 
+                  alt="Home Hustle" 
+                  width={40} 
+                  height={40} 
+                  className="h-10 w-auto"
+                  priority
+                />
                 <span className="text-xl font-bold text-white">Home Hustle</span>
               </Link>
               <div className="hidden md:flex items-center gap-6">
@@ -78,9 +87,13 @@ export default function RootLayout({
             <div className="grid md:grid-cols-4 gap-8">
               <div>
                 <div className="flex items-center gap-2 mb-4">
-                  <div className="w-10 h-10 bg-[#FF8D07] rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-xl">H</span>
-                  </div>
+                  <Image 
+                    src="/house-icon.png" 
+                    alt="Home Hustle" 
+                    width={40} 
+                    height={40} 
+                    className="h-10 w-auto"
+                  />
                   <span className="text-xl font-bold text-white">Home Hustle</span>
                 </div>
                 <p className="text-sm">
