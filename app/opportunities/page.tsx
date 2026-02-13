@@ -11,8 +11,8 @@ const categories = [
     title: 'Remote Jobs',
     icon: '💼',
     description: 'Full-time and part-time positions from companies actively hiring remote workers.',
-    count: '17+',
-    examples: ['Customer Service', 'Data Entry', 'Claims Processing', 'Sales'],
+    count: '24+',
+    examples: ['Customer Service', 'AI Operations', 'Healthcare', 'Banking'],
     link: '/categories/remote-jobs',
     color: 'blue',
   },
@@ -20,8 +20,8 @@ const categories = [
     title: 'Freelance Work',
     icon: '✍️',
     description: 'Build your own client base with flexible project-based work on your own schedule.',
-    count: '12+',
-    examples: ['Writing', 'Design', 'Virtual Assistant', 'Web Development'],
+    count: '14+',
+    examples: ['Writing', 'Design', 'AI & Automation', 'Virtual Assistant'],
     link: '/categories/freelance',
     color: 'purple',
   },
@@ -29,8 +29,8 @@ const categories = [
     title: 'Passive Income',
     icon: '💰',
     description: 'Strategies to build income streams that work while you sleep.',
-    count: '13+',
-    examples: ['Dividends', 'Print on Demand', 'Digital Products', 'REITs'],
+    count: '17+',
+    examples: ['AI Voice Licensing', 'Custom GPTs', 'Digital Products', 'Newsletters'],
     link: '/categories/passive-income',
     color: 'emerald',
   },
@@ -38,8 +38,8 @@ const categories = [
     title: 'Side Hustles',
     icon: '🚀',
     description: 'Quick ways to make extra money that you can start this week.',
-    count: '20+',
-    examples: ['Delivery', 'Reselling', 'Pet Sitting', 'Handyman'],
+    count: '24+',
+    examples: ['AI Video Editing', 'GPT Building', 'Voice Packs', 'AI Automation'],
     link: '/categories/side-hustles',
     color: 'orange',
   },
@@ -47,10 +47,10 @@ const categories = [
 
 const featuredCompanies = [
   { name: 'Amazon', type: 'Remote Jobs', hiring: true },
-  { name: 'TTEC', type: 'Remote Jobs', hiring: true },
+  { name: 'Elevance Health', type: 'Remote Jobs', hiring: true },
+  { name: 'BELAY', type: 'Remote Jobs', hiring: true },
   { name: 'Upwork', type: 'Freelance', hiring: true },
   { name: 'DoorDash', type: 'Side Hustle', hiring: true },
-  { name: 'Rover', type: 'Side Hustle', hiring: true },
   { name: 'Instacart', type: 'Side Hustle', hiring: true },
 ]
 
@@ -89,7 +89,7 @@ export default function OpportunitiesPage() {
       {/* Quick Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
         <div className="bg-white rounded-xl border border-gray-200 p-6 text-center">
-          <div className="text-3xl font-bold text-blue-600">50+</div>
+          <div className="text-3xl font-bold text-blue-600">79+</div>
           <div className="text-sm text-gray-600">Opportunities</div>
         </div>
         <div className="bg-white rounded-xl border border-gray-200 p-6 text-center">
