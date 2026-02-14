@@ -236,6 +236,23 @@ const passiveIncomeIdeas = [
         cons: ['Requires email marketing expertise', 'Need to stay current with trends', 'Support requests'],
         resources: ['Gumroad.com', 'Klaviyo.com (for research)', 'CopyHackers.com'],
       },
+      {
+        title: 'AI Automation Blueprints',
+        income: '$300-5,000+/month',
+        startup: '$0-50',
+        effort: 'Medium upfront, Very Low ongoing',
+        timeToProfit: '1-2 months',
+        description: 'Package your automation expertise into ready-to-deploy blueprints. Combine Zapier/Make workflows with AI tools to solve specific business problems. Sell as templates or as done-for-you setups.',
+        howToStart: [
+          'Identify common automation needs (lead follow-up, data entry, reporting)',
+          'Build tested workflows using Zapier, Make, or n8n',
+          'Create video walkthroughs and setup guides',
+          'Sell on Gumroad or directly to businesses in your niche',
+        ],
+        pros: ['Growing demand as AI adoption increases', 'Can charge premium for specialized industries', 'Recurring from updates and support'],
+        cons: ['Tools change frequently', 'Requires staying current with AI developments', 'Support requests from buyers'],
+        resources: ['Gumroad.com', 'Zapier.com', 'Make.com'],
+      },
     ],
   },
   {

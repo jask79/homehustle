@@ -224,7 +224,7 @@ const remoteJobs = [
     type: 'Contract',
     description: 'Ranked #7 on FlexJobs Top 100 for 2026. Connects skilled professionals with busy executives. Roles include virtual assistants, bookkeepers, and social media managers. 100% remote since founding.',
     requirements: ['3+ years relevant experience', 'Strong communication', 'Self-directed', 'US-based'],
-    link: 'https://www.belaysolutions.com/join-our-team/',
+    link: 'https://belaysolutions.com/jobs/',
     hiring: true,
   },
   {
@@ -235,6 +235,36 @@ const remoteJobs = [
     description: 'Ranked #10 on FlexJobs Top 100 for 2026. Major US bank with growing remote workforce in customer service, fraud analysis, mortgage processing, and tech roles. Strong benefits and career growth.',
     requirements: ['Banking/finance experience preferred', 'Detail-oriented', 'Customer service skills'],
     link: 'https://careers.usbank.com/global/en/remote-jobs',
+    hiring: true,
+  },
+  {
+    company: 'Capital One',
+    title: 'Remote Customer Trust & Finance',
+    pay: '$22-50+/hour',
+    type: 'Full-Time',
+    description: 'Major financial services company with strong remote-first culture. Roles in customer service, fraud prevention, relationship management, and tech. Excellent benefits including 401(k) match and tuition reimbursement.',
+    requirements: ['Strong analytical skills', 'Customer-focused mindset', 'Tech-savvy'],
+    link: 'https://www.capitalonecareers.com/location/remote-jobs/1732/1000000000100/2/1',
+    hiring: true,
+  },
+  {
+    company: 'Automattic',
+    title: 'Remote Tech & Support',
+    pay: '$30-80+/hour',
+    type: 'Full-Time',
+    description: 'The company behind WordPress.com, WooCommerce, and Tumblr. Fully distributed since day one with 2,000+ employees across 90+ countries. Open vacation policy, home office stipend, and co-working allowances.',
+    requirements: ['Strong written communication', 'Self-directed work style', 'Comfortable with async communication'],
+    link: 'https://automattic.com/work-with-us/',
+    hiring: true,
+  },
+  {
+    company: 'Gitlab',
+    title: 'All-Remote Tech Roles',
+    pay: '$35-100+/hour',
+    type: 'Full-Time',
+    description: 'Pioneer of the all-remote movement with a public handbook. Engineering, sales, marketing, and support roles. Transparent compensation, equity grants, and unlimited PTO.',
+    requirements: ['Experience in your field', 'Strong async communication', 'Self-motivated'],
+    link: 'https://about.gitlab.com/jobs/',
     hiring: true,
   },
 ]
@@ -261,7 +291,7 @@ export default function RemoteJobsPage() {
           <div className="text-sm text-gray-600">Companies Hiring</div>
         </div>
         <div className="bg-green-50 rounded-xl p-4 text-center">
-          <div className="text-2xl font-bold text-green-600">$14-75</div>
+          <div className="text-2xl font-bold text-green-600">$14-100+</div>
           <div className="text-sm text-gray-600">Hourly Range</div>
         </div>
         <div className="bg-purple-50 rounded-xl p-4 text-center">
