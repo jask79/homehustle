@@ -251,6 +251,15 @@ const sideHustles = [
         tips: ['Bundle themed packs (gaming, meditation, podcast intros)', 'Offer custom add-ons for more revenue', 'List on Gumroad and Fiverr'],
         link: 'https://www.fiverr.com/categories/music-audio/voice-overs',
       },
+      {
+        title: 'AI Booking Bot Builder',
+        income: '$300-500/month per client (recurring)',
+        startup: '$117/mo (HighLevel + ChatGPT Plus)',
+        flexibility: 'High',
+        description: 'Build simple AI booking bots for local businesses like wellness studios, dental offices, and real estate agents. These bots reduce no-shows and qualify leads automatically. Once you create a template, you can deploy to multiple clients in the same niche.',
+        tips: ['Pick ONE niche (wellness, dental, HVAC) and master it', 'Create a demo bot to show prospects', 'Focus on recurring revenue over one-time fees'],
+        link: 'https://www.gohighlevel.com/',
+      },
     ],
   },
   {

@@ -11,7 +11,7 @@ const categories = [
     title: 'Remote Jobs',
     icon: '💼',
     description: 'Full-time and part-time positions from companies actively hiring remote workers.',
-    count: '24+',
+    count: '28+',
     examples: ['Customer Service', 'AI Operations', 'Healthcare', 'Banking'],
     link: '/categories/remote-jobs',
     color: 'blue',
@@ -38,7 +38,7 @@ const categories = [
     title: 'Side Hustles',
     icon: '🚀',
     description: 'Quick ways to make extra money that you can start this week.',
-    count: '24+',
+    count: '25+',
     examples: ['AI Video Editing', 'GPT Building', 'Voice Packs', 'AI Automation'],
     link: '/categories/side-hustles',
     color: 'orange',
@@ -46,11 +46,11 @@ const categories = [
 ]
 
 const featuredCompanies = [
-  { name: 'Amazon', type: 'Remote Jobs', hiring: true },
+  { name: 'Lockheed Martin', type: 'Remote Jobs', hiring: true },
   { name: 'Elevance Health', type: 'Remote Jobs', hiring: true },
+  { name: 'Centene', type: 'Remote Jobs', hiring: true },
   { name: 'BELAY', type: 'Remote Jobs', hiring: true },
   { name: 'Upwork', type: 'Freelance', hiring: true },
-  { name: 'DoorDash', type: 'Side Hustle', hiring: true },
   { name: 'Instacart', type: 'Side Hustle', hiring: true },
 ]
 
@@ -89,7 +89,7 @@ export default function OpportunitiesPage() {
       {/* Quick Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
         <div className="bg-white rounded-xl border border-gray-200 p-6 text-center">
-          <div className="text-3xl font-bold text-blue-600">79+</div>
+          <div className="text-3xl font-bold text-blue-600">82+</div>
           <div className="text-sm text-gray-600">Opportunities</div>
         </div>
         <div className="bg-white rounded-xl border border-gray-200 p-6 text-center">
